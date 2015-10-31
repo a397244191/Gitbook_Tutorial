@@ -10,10 +10,10 @@
 
 恩... 在不想更動到設定時(重裝`arm-elf-insight` or ...)
 
-可以學習利用 `gdb` 更改數值
+可以學習利用 `gdb` 更改數值(後面在介紹如何打開GDB)
 
 ```
-(gdb) set $r0 = 1000
+set $r0 = 1000
 ```
 
 # crt0.s 問題
@@ -37,3 +37,27 @@ open file or run 跑進了 crt0.s了!
 如果前面沒先去除 `crt0.s` 的 breakpoint，之後再次 run 又會跑進去喔!
 
 p.s. 不過再次開起還是有這問題，這就只能詢問教授了
+
+# insight 開啟 GDB指令列
+
+如圖，點開它
+
+![test6](https://cloud.githubusercontent.com/assets/9114484/10863946/165697a4-8018-11e5-8abf-e6bd22ef8b5e.png)
+
+之後就能輸入你要的指令了
+
+例如：
+
+##### 開檔案
+
+```
+file (檔案)
+```
+
+##### 設置break point
+
+```
+break (行數)
+```
+
+至於其他指令就有待有需求再補充
